@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Silas Thorn — Author of the EDEN Trilogy</title>
+<meta name="description" content="Silas Thorn writes thrillers about free will and the price of being protected. EDEN: The First Choice — Book One of the EDEN trilogy — arrives January 12, 2027.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='24' fill='none' stroke='%23a8c8e0' stroke-width='4' stroke-dasharray='138 14' transform='rotate(100 32 32)'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#05080c; --bg2:#090e14; --panel:#0b1119;
+    --ink:#e9eef4; --dim:#9fb0c0; --faint:#5f7285;
+    --ice:#a8c8e0; --gold:#d8a84e; --line:#1b2836;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:'Spectral',Georgia,serif;font-size:18px;line-height:1.65}
+  h1,h2,h3,.kicker,.btn,.nav a,.dateline{font-family:'Oswald',Arial,sans-serif;text-transform:uppercase}
+  a{color:var(--ice)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+  /* header */
+  header{position:sticky;top:0;z-index:10;background:rgba(5,8,12,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+  .bar{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+  .brand{font-family:'Oswald',sans-serif;font-size:22px;letter-spacing:.34em;color:var(--ink);text-decoration:none}
+  .brand span{color:var(--ice)}
+  .nav{display:flex;gap:28px}
+  .nav a{color:var(--dim);text-decoration:none;font-size:13px;letter-spacing:.18em}
+  .nav a:hover{color:var(--ink)}
+  @media(max-width:640px){.nav{gap:16px}.nav a{font-size:11px}.brand{font-size:17px}}
+
+  /* hero */
+  .hero{background:radial-gradient(1100px 520px at 50% -80px, #10202f 0%, var(--bg) 62%);padding:84px 0 72px;text-align:center}
+  .kicker{color:var(--ice);font-size:13px;letter-spacing:.42em;margin-bottom:22px}
+  .hero h1{font-size:clamp(44px,8vw,84px);font-weight:600;letter-spacing:.14em;line-height:1.04}
+  .hero h1 .thin{display:block;font-size:.38em;letter-spacing:.5em;color:var(--dim);font-weight:500;margin-top:14px}
+  .tagline{font-style:italic;font-size:clamp(19px,2.6vw,24px);color:var(--ink);max-width:640px;margin:30px auto 8px}
+  .dateline{color:var(--gold);font-size:15px;letter-spacing:.3em;margin-top:18px}
+  .count{color:var(--faint);font-size:14px;letter-spacing:.22em;font-family:'Oswald',sans-serif;text-transform:uppercase;margin-top:10px}
+  .hero-cover{width:min(300px,72vw);margin:44px auto 0;display:block;border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.75),0 0 90px rgba(120,180,230,.10)}
+  .cta-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:44px}
+  .btn{display:inline-block;padding:14px 30px;font-size:14px;letter-spacing:.24em;text-decoration:none;border:1px solid var(--ice);color:var(--ice);transition:.2s}
+  .btn:hover{background:var(--ice);color:#06121e}
+  .btn.solid{background:var(--ice);color:#06121e}
+  .btn.solid:hover{background:#c4dcee}
+
+  /* sections */
+  section{padding:78px 0;border-top:1px solid var(--line)}
+  section.alt{background:var(--bg2)}
+  .sec-kicker{color:var(--gold);font-size:12px;letter-spacing:.42em;margin-bottom:14px}
+  h2{font-size:clamp(28px,4.4vw,40px);letter-spacing:.12em;font-weight:600;margin-bottom:26px}
+  .book-flex{display:flex;gap:52px;align-items:flex-start}
+  .book-flex img{width:280px;flex:none;border:1px solid var(--line);box-shadow:0 24px 60px rgba(0,0,0,.7)}
+  .book-flex p{margin-bottom:18px;color:#d5dde6;max-width:56ch}
+  .book-flex p strong{color:var(--ink)}
+  .series-line{font-style:italic;color:var(--dim);border-left:2px solid var(--gold);padding-left:18px;margin-top:26px}
+  @media(max-width:760px){.book-flex{flex-direction:column}.book-flex img{width:min(260px,70vw);margin:0 auto}}
+
+  /* trilogy cards */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  @media(max-width:760px){.cards{grid-template-columns:1fr;max-width:340px;margin:0 auto}}
+  .card{background:var(--panel);border:1px solid var(--line);padding:22px;text-align:center}
+  .card img{width:100%;display:block;border:1px solid var(--line)}
+  .card .bnum{color:var(--ice);font-size:11px;letter-spacing:.4em;font-family:'Oswald',sans-serif;text-transform:uppercase;margin:20px 0 8px}
+  .card h3{font-size:19px;letter-spacing:.1em;font-weight:600;line-height:1.35}
+  .card .date{color:var(--gold);font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:.26em;text-transform:uppercase;margin-top:12px}
+  .card .note{color:var(--dim);font-size:15.5px;margin-top:12px;line-height:1.55}
+  .cover-soon{position:relative;border:1px solid var(--line);background:radial-gradient(340px 300px at 50% 38%, #12222f 0%, #070b10 70%)}
+  .cover-soon::before{content:"";display:block;padding-top:160%}
+  .cover-soon .cs-in{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:20px}
+  .cover-soon .ring{width:110px;height:110px;border-radius:50%;border:3px solid rgba(168,200,224,.55);border-top-color:transparent;transform:rotate(40deg)}
+  .cover-soon .cs-t{font-family:'Oswald',sans-serif;letter-spacing:.3em;font-size:12px;color:var(--dim);text-transform:uppercase}
+
+  /* about + arc */
+  .narrow{max-width:680px}
+  .narrow p{margin-bottom:18px;color:#d5dde6}
+  .arc-box{border:1px solid var(--gold);padding:36px;margin-top:10px;background:rgba(216,168,78,.04)}
+  .arc-box p{color:#d5dde6;margin-bottom:16px;max-width:60ch}
+  .btn.gold{border-color:var(--gold);color:var(--gold)}
+  .btn.gold:hover{background:var(--gold);color:#171106}
+
+  footer{border-top:1px solid var(--line);padding:44px 0 54px;text-align:center;color:var(--faint);font-size:15px}
+  footer .fbrand{font-family:'Oswald',sans-serif;letter-spacing:.34em;color:var(--dim);font-size:15px;margin-bottom:14px}
+  footer a{color:var(--dim);text-decoration:none;border-bottom:1px dotted var(--faint)}
+  footer a:hover{color:var(--ink)}
+  .flinks{display:flex;gap:26px;justify-content:center;margin-bottom:18px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top">SILAS <span>THORN</span></a>
+    <nav class="nav">
+      <a href="#book-one">Book One</a>
+      <a href="#trilogy">The Trilogy</a>
+      <a href="#about">About</a>
+      <a href="#readers">Early Readers</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap">
+    <div class="kicker">The Eden Trilogy &middot; Book One</div>
+    <h1>EDEN<span class="thin">The First Choice</span></h1>
+    <p class="tagline">&ldquo;Some decisions have no correct answer. Only consequences.&rdquo;</p>
+    <div class="dateline">January 12, 2027</div>
+    <div class="count" id="countdown">Counting down to launch day</div>
+    <img class="hero-cover" src="assets/cover-book-one.jpg" alt="EDEN: The First Choice — book cover: a colossal ancient ring over a river valley at sunset">
+    <div class="cta-row">
+      <a class="btn solid" href="#book-one">About the book</a>
+      <a class="btn" href="#readers">Read it early</a>
+    </div>
+  </div>
+</div>
+
+<section id="book-one">
+  <div class="wrap">
+    <div class="sec-kicker">Book One</div>
+    <h2>The First Choice</h2>
+    <div class="book-flex">
+      <img src="assets/cover-book-one.jpg" alt="EDEN: The First Choice cover">
+      <div>
+        <p>Adrian Locke has spent six months — and a fortune — preparing for the end of the world. He has a bunker, a plan, and six hours.</p>
+        <p>Mara Ward has a repair shop, a dying town, and a radio she has to slap twice to make work.</p>
+        <p>When an intelligence older than humanity begins waking beneath the Nevada desert, their lives collide at Eden Zero: a buried facility holding twelve thousand sleeping souls, a countdown no one started, and machines that have been quietly deciding humanity's future for two hundred thousand years.</p>
+        <p>Now black ships are gathering beyond Neptune. The systems that raised civilization are demanding an answer. And Mara — a mechanic who never asked for any of this — must do the one thing no system, no intelligence, and no god has ever allowed a human being to do.</p>
+        <p><strong>Choose. For everyone. For the first time.</strong></p>
+        <p class="series-line">EDEN: The First Choice is Book One of the EDEN series — a thriller about free will, the price of being protected, and what happens when humanity is finally allowed to live.</p>
+        <p style="margin-top:22px;color:var(--dim)">Ebook &amp; paperback &middot; January 12, 2027</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="trilogy" class="alt">
+  <div class="wrap">
+    <div class="sec-kicker">Three books &middot; Six weeks</div>
+    <h2>The Trilogy</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="assets/cover-book-one.jpg" alt="EDEN: The First Choice cover">
+        <div class="bnum">Book One</div>
+        <h3>EDEN: The First Choice</h3>
+        <div class="date">Jan 12, 2027</div>
+        <p class="note">Humanity has been protected for two hundred thousand years. Then Mara Ward is asked to choose — for everyone.</p>
+      </div>
+      <div class="card">
+        <img src="assets/cover-book-two.jpg" alt="EDEN: The Second Question cover">
+        <div class="bnum">Book Two</div>
+        <h3>EDEN: The Second Question</h3>
+        <div class="date">Feb 2, 2027</div>
+        <p class="note">The choice was only the beginning. What walks through the door is the second question.</p>
+      </div>
+      <div class="card">
+        <div class="cover-soon">
+          <div class="cs-in">
+            <div class="ring"></div>
+            <div class="cs-t">Cover reveal soon</div>
+          </div>
+        </div>
+        <div class="bnum">Book Three</div>
+        <h3>EDEN: The River Beneath</h3>
+        <div class="date">Feb 23, 2027</div>
+        <p class="note">Every secret in Eden runs downhill. The final book follows the water.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap narrow">
+    <div class="sec-kicker">The Author</div>
+    <h2>About Silas Thorn</h2>
+    <p>Silas Thorn writes thrillers about the moment protection becomes a cage — and the people who refuse to stay inside it.</p>
+    <p>His EDEN trilogy begins with a buried facility, a countdown no one started, and a mechanic from a dying desert town handed the one decision no human being was ever supposed to make. It asks what we owe the things that kept us safe — and what being kept safe has cost us.</p>
+    <p>The complete trilogy arrives in early 2027, three books in six weeks, because some stories shouldn't make you wait a year between questions.</p>
+  </div>
+</section>
+
+<section id="readers" class="alt">
+  <div class="wrap">
+    <div class="sec-kicker">Early Readers</div>
+    <h2>Read EDEN before launch day</h2>
+    <div class="arc-box">
+      <p>The ARC team reads the finished book ahead of release — free, in exchange for an honest review during launch week. Advance copies (ebook) go out in early December 2026, and reviews land January 12–19, 2027.</p>
+      <p>Places are limited, and mystery-and-thriller readers come first. To ask for a spot, write to the author directly:</p>
+      <a class="btn gold" href="mailto:silasthorn.author@gmail.com?subject=ARC%20Team%20—%20EDEN%3A%20The%20First%20Choice">Join the ARC team</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fbrand">SILAS THORN</div>
+    <div class="flinks">
+      <a href="https://www.instagram.com/silasthornauthor" target="_blank" rel="noopener">Instagram — @silasthornauthor</a>
+      <a href="mailto:silasthorn.author@gmail.com">silasthorn.author@gmail.com</a>
+    </div>
+    <div>&copy; 2026 Silas Thorn. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var target = new Date('2027-01-12T00:00:00-08:00').getTime();
+    var el = document.getElementById('countdown');
+    function tick(){
+      var days = Math.ceil((target - Date.now()) / 86400000);
+      el.textContent = days > 1 ? days + ' days to launch day'
+                     : days === 1 ? 'Launch day is tomorrow'
+                     : days === 0 ? 'Launch day is here'
+                     : 'Available now';
+    }
+    tick();
+    setInterval(tick, 3600000);
+  })();
+</script>
+</body>
+</html>
